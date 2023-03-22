@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./js/script.js" type="module"></script>
+
+    <title>Document</title>
+</head>
+<body>
+
+        <div id="intro_board">
+            <div class="intro-top">Welcome! Enjoy the game </div>
+            
+            <div>
+                <label for="name">Enter Your name :*</label><br>
+                <input type="text" id="name" name="name"><br>
+            </div>
+            <div class="room-section">
+                <div> 
+                    <div>Book a table :</div>
+                     <button id="create_room_btn">Create code</button>
+                     <span id="room_id"> </span>
+                     <div id="room-tip">Share this code with your friend to play</div>
+                </div>
+                <div>Join your friend  : <input type="text" id="joining_room_id"><button id="join_room_btn">Join</button></div>
+            </div>
+            <div>
+            </div>
+        </div>
+
+    <div class="playground">
+    <div class="top-board">
+            <div id="icon">
+              
+            </div>
+            
+            <div class="score-board">
+            <div id="players-name"><span id="left_player_name"></span> VS <span id="right_player_name"></span></div>
+            
+            <div class="scores">
+                <div id="player-a">0</div>
+                <div id="player-b">0</div>
+            </div>
+
+            <!-- <div id="ball-speed">
+                <button class="speed_btn" id=""> Normal</button>
+                <button class="speed_btn" id=""> Fast</button>
+                <button class="speed_btn" id=""> V.fast</button>
+                <button class="speed_btn" id="">F&F</button>
+            </div> -->
+            </div>  
+              
+    </div>
+
+    <div class="table-area">
+        <div class="table">
+        <div class="paddle left" id="paddle_a"></div>
+        <div id="ball"></div>
+        <div class="paddle right" id="paddle_b"></div>
+        </div>
+    </div>
+    </div>
+
+</body>
+</html>

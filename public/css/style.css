@@ -1,0 +1,201 @@
+*,*::after, *::before{
+    box-sizing: border-box;
+}
+
+body{
+    margin:0px;
+    background-color: #333;
+    height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../images/bgimage.jpg");
+}
+
+/* Game intro */
+#intro_board{
+    font-size: 1.5vw;
+    padding-top:1%;
+    padding-left: 5%;
+    font-family: 'Caveat', cursive;
+    color: rgb(0, 0, 0);
+    background-color: rgb(239, 243, 12);
+    height: 50%;
+    width: 70%;
+    border-radius: 5px;
+}
+
+.room-section{
+    margin-top:2%;
+    display: flex;
+    justify-content:center;
+    height:50%;
+}
+
+.room-section>div{
+    border: 2px solid black;
+    width: 40%;
+    height:100%;
+    padding:5%;
+
+}
+
+.intro-top{
+    text-align: center;
+    font-size:xx-large;
+
+}
+
+#room-tip{
+    margin-top: 2%;
+   font-size:xx-small;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+}
+
+:root{
+    --hue:200;
+    --saturation:50%;
+    --foreground-color:hsl(var(--hue),var(--saturation),100%);
+    --background-color:hsl(var(--hue),var(--saturation),20%);
+}
+
+
+
+.playground{
+    display: none;
+    border:2px solid black;
+    margin:auto;
+    width:80vw;
+    height:95vh;
+    background-color: rgb(206, 206, 206);
+}
+
+/* score-board section  */
+.top-board{
+    background-color: aqua;
+    height:10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#icon{
+    background-image: url("../images/icon.png");
+    background-repeat:space;
+    width: 20%;
+    
+    height:100%;
+}
+
+.score-board{
+    display: flex;
+    justify-content:space-around;
+    text-align: center;
+    align-items: center;
+    width:80%; 
+    height:100%;
+    margin-top: 1%;
+    font-size: 3vh;
+}
+
+#players-name{
+    font-size: larger;
+    font-family: 'Caveat', cursive;
+}
+
+.scores{
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 4vh;
+}
+
+.scores>*{
+    text-align: left;;
+    padding:0 2vh;
+}
+
+#player-a{
+    text-align:right;
+    border-right:.5vh solid var(--foreground-color);
+}
+
+
+/* table section  */
+.table-area{
+    border:2px solid black;
+    height:90%;
+    display: flex;
+    align-items: center;
+}
+
+
+.table{
+    border:3px solid black;
+    box-shadow: 1px 1px 2px 2px black;
+    margin:auto;
+    width:90%;
+    background-color: var(--background-color);
+    height: 98%;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.paddle{
+    background-color: var(--foreground-color);
+    width:1.2vw;
+    height:15%;
+    border:3px solid black;
+    border-color: rgb(60, 255, 0);
+    border-radius:2px;
+}
+
+#paddle_a{
+    --y:0;
+
+    position:relative;
+    bottom:calc(var(--y)*10px);
+}
+#paddle_b{
+    --y:0;
+
+    position:relative;
+    bottom:calc(var(--y)*10px);
+}
+
+/* for blinking effect on collision for paddles */
+.blink {
+    animation: blink 1s linear infinite;
+  }
+  
+  @keyframes blink {
+    10% {
+      border:5px solid;
+      border-color: rgb(229, 255, 0);
+    }
+  }
+  
+
+#ball{
+    --x:0;
+    --y:0;
+  
+
+    position:relative;
+    background-color:var(--foreground-color);
+    bottom:calc(var(--y)*1px);
+    left:calc(var(--x)*1px);
+    width:1.5vw;
+    height:1.5vw;
+    border-radius: 50%;
+}
+
+#ball_speed{
+    display: flex;
+}
+
+.speed_btn{
+    width:30%;
+}
+
